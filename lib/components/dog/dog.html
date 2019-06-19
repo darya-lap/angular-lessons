@@ -1,0 +1,24 @@
+<p>{{ name }}</p>
+
+<div>
+  <label for="praiseInput">
+    {{ praiseLabel }}
+  </label>
+  <input
+    #dogPraiseInput
+    id="praiseInput"
+    (change)="handlePraise(dogPraiseInput.value)"></div>
+<img
+    [src]="imgUrl"
+  class="doggy">
+
+<p>Woof! My name is {{ name }}</p>
+
+<dog-thought
+  [praise]="praise">
+</dog-thought>
+
+<button
+  (click)="doWoof()">
+  WOOF
+</button>
