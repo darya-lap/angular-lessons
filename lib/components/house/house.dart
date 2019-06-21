@@ -10,18 +10,12 @@ import 'package:angular_tour_of_heroes/components/dog/dog.dart';
     NgFor
   ]
 )
-class House implements OnChanges{
+class House {
   Iterable<String> dogNames = <String>['Lucky', 'Teddy', 'Jackie', 'Nadya'];
 
   final List<String> dogHouseLog = [];
 
   void onWoof(String log) {
     dogHouseLog.add(log);
-  }
-
-  @override
-  void ngOnChanges(Map<String, SimpleChange> changes) {
-    print('DEBUG: CHANGES');
-    // TODO: implement ngOnChanges
   }
 }
