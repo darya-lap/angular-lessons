@@ -1,7 +1,15 @@
+<h3>{{doorState}}</h3>
+
+<human
+  [name]="humanName">
+</human>
+
 <dog
   *ngFor="let dogName of dogNames"
   [name]="dogName"
-  (onWoof)="onWoof($event)"></dog>
+  (onDogRequest)="onDogRequest($event)">
+
+</dog>
 
 <p *ngFor="let log of dogHouseLog">{{log}}</p>
 
