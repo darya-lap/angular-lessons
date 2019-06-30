@@ -1,5 +1,5 @@
 import 'package:angular/angular.dart';
-import 'package:angular_tour_of_heroes/components/dog/dog.dart';
+import 'package:house_with_dogs/components/dog/dog.dart';
 
 @Component(
   selector: 'house',
@@ -7,7 +7,8 @@ import 'package:angular_tour_of_heroes/components/dog/dog.dart';
   styleUrls: ['house.css'],
   directives: [
     Dog,
-    NgFor
+    NgFor,
+    NgIf
   ]
 )
 class House {

@@ -1,5 +1,5 @@
 import 'package:angular/angular.dart';
-import 'package:angular_tour_of_heroes/components/house/house.dart';
+import 'package:house_with_dogs/components/house/house.dart';
 
 @Component(
   selector: 'my-app',

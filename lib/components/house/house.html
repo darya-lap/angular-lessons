@@ -3,6 +3,13 @@
   [name]="dogName"
   (onWoof)="onWoof($event)"></dog>
 
-<p *ngFor="let log of dogHouseLog">{{log}}</p>
+<p
+  *ngIf="dogHouseLog.isEmpty">
+  There are no news
+</p>
+<p
+  *ngFor="let log of dogHouseLog">
+  {{log}}
+</p>
 
 

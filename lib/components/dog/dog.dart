@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:angular/angular.dart';
-import 'package:angular_tour_of_heroes/components/dog_thought/dog_thought.dart';
+import 'package:house_with_dogs/components/dog_thought/dog_thought.dart';
 
 @Component(
   selector: 'dog',
