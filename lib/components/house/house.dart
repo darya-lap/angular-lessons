@@ -1,5 +1,6 @@
 import 'package:angular/angular.dart';
 import 'package:angular_tour_of_heroes/components/dog/dog.dart';
+import 'package:angular_tour_of_heroes/components/door/door.dart';
 import 'package:angular_tour_of_heroes/components/human/human.dart';
 import 'package:angular_tour_of_heroes/services/house_door_service.dart';
 
@@ -11,7 +12,8 @@ import 'package:angular_tour_of_heroes/services/house_door_service.dart';
   directives: [
     Dog,
     NgFor,
-    Human
+    Human,
+    Door
   ],
   providers: [
     HouseDoorService
@@ -27,7 +29,7 @@ class House {
 
   final List<String> dogHouseLog = [];
 
-  String get doorState => _houseDoorService.isDoorOpened ? 'Door Is Opened' : 'Door Is Closed';
+  bool get isDoorOpened => _houseDoorService.isDoorOpened;
 
   House(this._houseDoorService);
 
