@@ -4,7 +4,7 @@ import 'package:angular/angular.dart';
 import 'package:angular_tour_of_heroes/components/dog_thought/dog_thought.dart';
 import 'package:angular_tour_of_heroes/enums/location.dart';
 import 'package:angular_tour_of_heroes/components/human/human.dart';
-import 'package:angular_tour_of_heroes/services/house_door_service.dart';
+import 'package:angular_tour_of_heroes/services/door_services/house_door_service.dart';
 
 @Component(
   selector: 'dog',
