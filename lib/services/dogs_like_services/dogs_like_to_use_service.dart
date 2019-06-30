@@ -1,4 +1,4 @@
-import 'package:angular_tour_of_heroes/enums/exit.dart';
+import 'package:house_with_dogs/enums/exit.dart';
 
 abstract class DogsLikeToUseService {
   Exit dogsLike;

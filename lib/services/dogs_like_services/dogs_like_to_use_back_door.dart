@@ -1,5 +1,5 @@
-import 'package:angular_tour_of_heroes/enums/exit.dart';
-import 'package:angular_tour_of_heroes/services/dogs_like_services/dogs_like_to_use_service.dart';
+import 'package:house_with_dogs/enums/exit.dart';
+import 'package:house_with_dogs/services/dogs_like_services/dogs_like_to_use_service.dart';
 
 class DogsLikeToUseBackDoor extends DogsLikeToUseService {
   @override

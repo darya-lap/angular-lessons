@@ -1,4 +1,4 @@
-import 'package:angular_tour_of_heroes/services/door_services/house_door_service.dart';
+import 'package:house_with_dogs/services/door_services/house_door_service.dart';
 
 class BackDoorService extends HouseDoorService {
   @override

@@ -1,8 +1,8 @@
 import 'package:angular/angular.dart';
-import 'package:angular_tour_of_heroes/components/house/house.dart';
-import 'package:angular_tour_of_heroes/services/dogs_like_services/dogs_like_to_use_back_door.dart';
-//import 'package:angular_tour_of_heroes/services/dogs_like_services/dogs_like_to_use_front_door.dart';
-import 'package:angular_tour_of_heroes/services/dogs_like_services/dogs_like_to_use_service.dart';
+import 'package:house_with_dogs/components/house/house.dart';
+import 'package:house_with_dogs/services/dogs_like_services/dogs_like_to_use_back_door.dart';
+//import 'package:house_with_dogs/services/dogs_like_services/dogs_like_to_use_front_door.dart';
+import 'package:house_with_dogs/services/dogs_like_services/dogs_like_to_use_service.dart';
 
 @Component(
   selector: 'my-app',

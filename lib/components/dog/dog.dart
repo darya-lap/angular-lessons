@@ -1,10 +1,10 @@
 import 'dart:async';
 
 import 'package:angular/angular.dart';
-import 'package:angular_tour_of_heroes/components/dog_thought/dog_thought.dart';
-import 'package:angular_tour_of_heroes/enums/location.dart';
-import 'package:angular_tour_of_heroes/components/human/human.dart';
-import 'package:angular_tour_of_heroes/services/door_services/house_door_service.dart';
+import 'package:house_with_dogs/components/dog_thought/dog_thought.dart';
+import 'package:house_with_dogs/enums/location.dart';
+import 'package:house_with_dogs/components/human/human.dart';
+import 'package:house_with_dogs/services/door_services/house_door_service.dart';
 
 @Component(
   selector: 'dog',

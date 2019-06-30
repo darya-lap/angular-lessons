@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:angular/angular.dart';
-import 'package:angular_tour_of_heroes/services/door_services/house_door_service.dart';
+import 'package:house_with_dogs/services/door_services/house_door_service.dart';
 
 @Component(
     selector: 'human',
@@ -41,6 +41,7 @@ class Human {
       isInProcess = true;
       _houseDoorService.openDoor().then((_){
         _cdRef.markForCheck();
+        _onHumanTalkController.add('($name) The ${_houseDoorService.doorName} door is opened.');
         isInProcess = false;
       });
     }
@@ -56,6 +57,7 @@ class Human {
       isInProcess = true;
       _houseDoorService.closeDoor().then((_) {
         _cdRef.markForCheck();
+        _onHumanTalkController.add('($name) The ${_houseDoorService.doorName} door is closed.');
         isInProcess = false;
       });
     }
