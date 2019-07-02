@@ -14,9 +14,6 @@ import 'package:house_with_dogs/services/door_services/house_door_service.dart';
     directives: [
     DogThought,
     NgIf
-  ],
-  providers: [
-    Human
   ]
 )
 class Dog {
