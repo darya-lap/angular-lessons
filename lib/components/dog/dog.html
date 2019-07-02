@@ -1,4 +1,4 @@
-<p>{{ name }}</p>
+<p>{{ name }} in {{ location }}</p>
 
 <div>
   <label for="praiseInput">
@@ -12,8 +12,6 @@
     [src]="imgUrl"
   class="doggy">
 
-<p>Woof! My name is {{ name }}</p>
-
 <dog-thought
   [praise]="praise">
 </dog-thought>
@@ -21,4 +19,16 @@
 <button
   (click)="doWoof()">
   WOOF
+</button>
+
+<button
+  *ngIf="location=='House'"
+  (click)="tryToPlayInGarden()">
+  Go To Garden
+</button>
+
+<button
+  *ngIf="location=='Garden'"
+  (click)="tryToComeHome()">
+  Go Home
 </button>

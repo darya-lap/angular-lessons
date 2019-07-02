@@ -1,14 +1,25 @@
+<door
+  [isDoorOpened]="isDoorOpened">
+</door>
+
+<human
+  [name]="humanName"
+  (onHumanTalk)="onHumanTalk($event)">
+</human>
+
 <dog
   *ngFor="let dogName of dogNames"
   [name]="dogName"
-  (onWoof)="onWoof($event)"></dog>
+  (onDogRequest)="onDogRequest($event)">
+</dog>
 
 <p
   *ngIf="dogHouseLog.isEmpty">
   There are no news
 </p>
+
 <p
-  *ngFor="let log of dogHouseLog">
+    *ngFor="let log of lastDogHouseLogs">
   {{log}}
 </p>
 
