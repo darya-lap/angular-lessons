@@ -1,8 +1,6 @@
 import 'package:angular/angular.dart';
 import 'package:house_with_dogs/components/house/house.dart';
-import 'package:house_with_dogs/services/dogs_like_services/dogs_like_to_use_back_door.dart';
-//import 'package:house_with_dogs/services/dogs_like_services/dogs_like_to_use_front_door.dart';
-import 'package:house_with_dogs/services/dogs_like_services/dogs_like_to_use_service.dart';
+import 'package:house_with_dogs/modules/app_module.dart';
 
 @Component(
   selector: 'my-app',
@@ -11,14 +9,9 @@ import 'package:house_with_dogs/services/dogs_like_services/dogs_like_to_use_ser
   directives: [
     House
   ],
-  providers:[
-    FactoryProvider(DogsLikeToUseService, dogsLikeToUseServiceFactory),
-  ]
+  providers: appModule
 )
 class AppComponent {
   String name = 'Dogs in my house';
   String humanName = 'Tom';
 }
-
-DogsLikeToUseService dogsLikeToUseServiceFactory() => DogsLikeToUseBackDoor();
-//DogsLikeToUseService dogsLikeToUseServiceFactory() => DogsLikeToUseFrontDoor();

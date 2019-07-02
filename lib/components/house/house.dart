@@ -2,10 +2,7 @@ import 'package:angular/angular.dart';
 import 'package:house_with_dogs/components/dog/dog.dart';
 import 'package:house_with_dogs/components/door/door.dart';
 import 'package:house_with_dogs/components/human/human.dart';
-import 'package:house_with_dogs/enums/exit.dart';
-import 'package:house_with_dogs/services/door_services/back_door_service.dart';
-import 'package:house_with_dogs/services/dogs_like_services/dogs_like_to_use_service.dart';
-import 'package:house_with_dogs/services/door_services/front_door_service.dart';
+import 'package:house_with_dogs/modules/house_module.dart';
 import 'package:house_with_dogs/services/door_services/house_door_service.dart';
 
 @Component(
@@ -20,9 +17,7 @@ import 'package:house_with_dogs/services/door_services/house_door_service.dart';
     Human,
     Door
   ],
-  providers: [
-    FactoryProvider(HouseDoorService, houseDoorServiceFactory)
-  ]
+  providers: houseModule
 )
 class House {
   Iterable<String> dogNames = <String>['Lucky', 'Teddy', 'Jackie', 'Nadya'];
@@ -52,8 +47,4 @@ class House {
   void onHumanTalk(String log) {
     dogHouseLog.add(log);
   }
-}
-
-HouseDoorService houseDoorServiceFactory(DogsLikeToUseService dogLikesService) {
-  return dogLikesService.dogsLike == Exit.frontDoor ? FrontDoorService() : BackDoorService();
 }
