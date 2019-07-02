@@ -1,5 +1,5 @@
 import 'package:angular/angular.dart';
-import 'package:angular_tour_of_heroes/app_component.template.dart' as ng;
+import 'package:house_with_dogs/components/app/app.template.dart' as ng;
 
 void main() {
   runApp(ng.AppComponentNgFactory);
