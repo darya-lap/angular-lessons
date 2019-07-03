@@ -7,11 +7,11 @@
   (onHumanTalk)="onHumanTalk($event)">
 </human>
 
-<dog
-  *ngFor="let dogName of dogNames"
-  [name]="dogName"
-  (onDogRequest)="onDogRequest($event)">
-</dog>
+<room
+  *ngFor="let room of rooms"
+  [roomName]="room.roomName"
+  [dog]="getDogByRoomId(room.id)">
+</room>
 
 <p
   *ngIf="dogHouseLog.isEmpty">
