@@ -1,5 +1,5 @@
 import 'package:angular/angular.dart';
-import 'package:house_with_dogs/components/house/house.dart';
+import 'package:house_with_dogs/components/house_component/house_component.dart';
 import 'package:house_with_dogs/modules/app_module.dart';
 
 @Component(
@@ -7,7 +7,7 @@ import 'package:house_with_dogs/modules/app_module.dart';
   templateUrl: 'app.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   directives: [
-    House
+    HouseComponent
   ],
   providers: appModule
 )

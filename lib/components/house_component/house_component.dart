@@ -1,5 +1,5 @@
 import 'package:angular/angular.dart';
-import 'package:house_with_dogs/components/dog/dog.dart';
+import 'package:house_with_dogs/components/dog_component/dog_component.dart';
 import 'package:house_with_dogs/components/door/door.dart';
 import 'package:house_with_dogs/components/human/human.dart';
 import 'package:house_with_dogs/modules/house_module.dart';
@@ -7,19 +7,19 @@ import 'package:house_with_dogs/services/door_services/house_door_service.dart';
 
 @Component(
   selector: 'house',
-  templateUrl: 'house.html',
-  styleUrls: ['house.css'],
+  templateUrl: 'house_component.html',
+  styleUrls: ['house_component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   directives: [
     NgFor,
     NgIf,
-    Dog,
+    DogComponent,
     Human,
     Door
   ],
   providers: houseModule
 )
-class House {
+class HouseComponent {
   Iterable<String> dogNames = <String>['Lucky', 'Teddy', 'Jackie', 'Nadya'];
 
   @Input()
@@ -38,7 +38,7 @@ class House {
 
   bool get isDoorOpened => _houseDoorService.isDoorOpened;
 
-  House(this._houseDoorService);
+  HouseComponent(this._houseDoorService);
 
   void onDogRequest(String log) {
     dogHouseLog.add(log);

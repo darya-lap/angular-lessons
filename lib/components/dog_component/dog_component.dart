@@ -7,22 +7,22 @@ import 'package:house_with_dogs/services/door_services/house_door_service.dart';
 
 @Component(
   selector: 'dog',
-  templateUrl: 'dog.html',
-  styleUrls: ['dog.css'],
+  templateUrl: 'dog_component.html',
+  styleUrls: ['dog_component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     directives: [
     DogThought,
     NgIf
   ]
 )
-class Dog {
+class DogComponent {
 
   final HouseDoorService _houseDoorService;
 
   @Input()
   String name = 'Noname :(';
 
-  Dog(this._houseDoorService);
+  DogComponent(this._houseDoorService);
 
   Location _location = Location.house;
   String praiseLabel = 'Praise for ';
