@@ -1,0 +1,18 @@
+[
+  {
+    "roomId": 1,
+    "dogId": 1
+  },
+  {
+    "roomId": 2,
+    "dogId": 2
+  },
+  {
+    "roomId": 3,
+    "dogId": 3
+  },
+  {
+    "roomId": 4,
+    "dogId": 4
+  }
+]

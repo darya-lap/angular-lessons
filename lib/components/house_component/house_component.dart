@@ -59,6 +59,6 @@ class HouseComponent {
   }
 
   Dog getDogByRoomId(int roomId) {
-    return dogs.firstWhere((dog) => dog.id == roomToDog[roomId]);
+    return dogs.firstWhere((dog) => dog.id == roomToDog[roomId], orElse: null);
   }
 }

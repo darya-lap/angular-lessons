@@ -3,6 +3,7 @@ import 'package:house_with_dogs/components/house_component/house_component.dart'
 import 'package:house_with_dogs/models/dog.dart';
 import 'package:house_with_dogs/models/room.dart';
 import 'package:house_with_dogs/modules/app_module.dart';
+import 'package:house_with_dogs/services/dog_house_manager.dart';
 
 @Component(
   selector: 'my-app',
@@ -13,11 +14,25 @@ import 'package:house_with_dogs/modules/app_module.dart';
   ],
   providers: appModule
 )
-class AppComponent {
-  String name = 'Dogs in my house';
+class AppComponent implements OnInit{
+  String name = 'Dogs in the house';
   String humanName = 'Tom';
+  List<Dog> dogs;
+  List<Room> rooms;
+  Map<int, int> roomToDog;
 
-  List<Dog> dogs = [Dog(1,'Lucky'), Dog(2,'Teddy'), Dog(3,'Jackie'), Dog(4,'Nadya'),];
-  List<Room> rooms = [Room(1, 'Sun'), Room(2, 'Blue Sky'), Room(3, 'Do not disturb'), Room(4, 'Sunflower')];
-  Map<int, int> roomToDog = {1:1, 2:2, 3:3, 4:4};
+  final DogHouseManager _dogHouseManager;
+  final ChangeDetectorRef _cdRef;
+
+  AppComponent(this._dogHouseManager, this._cdRef);
+
+
+  @override
+  void ngOnInit() async {
+    dogs = await _dogHouseManager.getDogs();
+    rooms = await _dogHouseManager.getRooms();
+    roomToDog = await _dogHouseManager.getRoomToDogMap();
+//    roomToDog = {1:1, 2:2, 3:3, 4:4};
+    _cdRef.markForCheck();
+  }
 }
