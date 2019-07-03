@@ -32,7 +32,6 @@ class AppComponent implements OnInit{
     dogs = await _dogHouseManager.getDogs();
     rooms = await _dogHouseManager.getRooms();
     roomToDog = await _dogHouseManager.getRoomToDogMap();
-//    roomToDog = {1:1, 2:2, 3:3, 4:4};
     _cdRef.markForCheck();
   }
 }

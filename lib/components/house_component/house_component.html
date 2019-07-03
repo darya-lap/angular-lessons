@@ -10,7 +10,8 @@
 <room
   *ngFor="let room of rooms"
   [roomName]="room.roomName"
-  [dog]="getDogByRoomId(room.id)">
+  [dog]="getDogByRoomId(room.id)"
+  (onDogRequest)="onDogRequest($event)">
 </room>
 
 <p

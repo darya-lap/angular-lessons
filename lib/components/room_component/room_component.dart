@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:angular/angular.dart';
 import 'package:house_with_dogs/components/dog_component/dog_component.dart';
 import 'package:house_with_dogs/models/dog.dart';
@@ -19,7 +21,12 @@ class RoomComponent {
   @Input()
   String roomName;
 
-  void onDogRequest(Object o) {
+  @Output()
+  Stream get onDogRequest => _onDogRequestController.stream;
 
+  StreamController<String> _onDogRequestController = StreamController<String>();
+
+  void onDogRequestHandler(String event) {
+    _onDogRequestController.add(event);
   }
 }
