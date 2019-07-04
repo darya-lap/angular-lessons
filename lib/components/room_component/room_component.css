@@ -1,0 +1,10 @@
+:host {
+    display: inline-block;
+    border: 2px solid green;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+.doggy {
+    max-width: 260px;
+}

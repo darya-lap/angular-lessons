@@ -1,0 +1,5 @@
+<p>{{dog.name}} lives in the "{{roomName}}" Room</p>
+<dog
+    [name]="dog.name"
+    (onDogRequest)="onDogRequestHandler($event)">
+</dog>
